@@ -12,6 +12,10 @@ path = "src/main.rs"
 name = "yabai-rs-msg"
 path = "src/bin/msg.rs"
 
+[[bin]]
+name = "yabai-rs-menubar"
+path = "src/bin/menubar.rs"
+
 [dependencies]
 toml = "0.8"
 serde = { version = "1.0", features = ["derive"] }
