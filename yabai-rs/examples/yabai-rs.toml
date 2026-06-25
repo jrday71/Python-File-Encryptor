@@ -1,0 +1,113 @@
+# yabai-rs example configuration
+# Place this file at ~/.config/yabai-rs/yabai-rs.toml
+
+# ── Gaps ─────────────────────────────────────────────────────────────────────
+[gaps]
+inner-horizontal = 10   # pixels between tiled windows (horizontal)
+inner-vertical   = 10   # pixels between tiled windows (vertical)
+outer-left       = 10   # screen edge padding
+outer-right      = 10
+outer-top        = 10
+outer-bottom     = 10
+
+# ── Default mode ─────────────────────────────────────────────────────────────
+[mode]
+default-layout    = "tiles"   # "tiles" | "accordion"
+accordion-padding = 30        # title-bar peek width in accordion mode
+
+# ── Workspaces ───────────────────────────────────────────────────────────────
+[[workspaces]]
+name    = "1"
+display = 1
+
+[[workspaces]]
+name    = "2"
+display = 1
+
+[[workspaces]]
+name    = "3"
+display = 1
+
+# … add more as needed
+
+# ── Keybindings ──────────────────────────────────────────────────────────────
+# Modifiers: alt, cmd, ctrl, shift
+# Keys:      a-z, 0-9, f1-f12, left, right, up, down, return, space, …
+
+[[keybindings]]
+key     = "alt-h"
+command = "focus left"
+
+[[keybindings]]
+key     = "alt-j"
+command = "focus down"
+
+[[keybindings]]
+key     = "alt-k"
+command = "focus up"
+
+[[keybindings]]
+key     = "alt-l"
+command = "focus right"
+
+[[keybindings]]
+key     = "alt-shift-h"
+command = "move left"
+
+[[keybindings]]
+key     = "alt-shift-j"
+command = "move down"
+
+[[keybindings]]
+key     = "alt-shift-k"
+command = "move up"
+
+[[keybindings]]
+key     = "alt-shift-l"
+command = "move right"
+
+[[keybindings]]
+key     = "alt-1"
+command = "workspace 1"
+
+[[keybindings]]
+key     = "alt-2"
+command = "workspace 2"
+
+[[keybindings]]
+key     = "alt-3"
+command = "workspace 3"
+
+[[keybindings]]
+key     = "alt-shift-1"
+command = "move-node-to-workspace 1"
+
+[[keybindings]]
+key     = "alt-shift-2"
+command = "move-node-to-workspace 2"
+
+[[keybindings]]
+key     = "alt-slash"
+command = "layout tiles"
+
+[[keybindings]]
+key     = "alt-comma"
+command = "layout accordion"
+
+[[keybindings]]
+key     = "alt-f"
+command = "fullscreen"
+
+[[keybindings]]
+key     = "alt-shift-q"
+command = "close"
+
+# ── Per-app rules ─────────────────────────────────────────────────────────────
+# Float specific apps automatically
+[[on-window-detected]]
+app     = "System Preferences"
+command = "layout floating"
+
+[[on-window-detected]]
+app     = "Calculator"
+command = "layout floating"
